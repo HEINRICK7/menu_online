@@ -2,10 +2,8 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    width: auto;
-    height: 100vh;
+    width: 100%;
     margin: 0;
-    padding: 0 5px 0 5px;
     box-sizing: border-box;
     background-color: #F6F5F5;
   }

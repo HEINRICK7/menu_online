@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Input from '../src/components/Input';
 
+import {HeaderWrap} from '../src/components/Header/headerWrap';
+
 
 const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
@@ -18,15 +20,21 @@ const Title = styled.div`
 
   color: #2D0C57;
 `;
+const ContainerCard = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+
+`;
 
 const ItemCard = styled.div`
   position: absolute;
-  left: 20px;
-  right:0;
   top: 255px;
   bottom: 0;
-
-  width: 177px;
+  left: 8px;
+  width: 47%;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -34,13 +42,10 @@ const ItemCard = styled.div`
 `;
 
 const ItemCard2 = styled.div`
-   
-   position: absolute;
-  left: 217px;
-  right: 5px;
+  position: absolute;
   top: 255px;
-  bottom: 0;
-  width: 177px;
+  right: 8px;
+  width: 47%;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -108,8 +113,10 @@ const QuantityCard = styled.div`
 const Home = () => {
   return (
     <>
+        <HeaderWrap><h1>Logo</h1></HeaderWrap>
         <Title>Categorias</Title>
            <Input />
+           <ContainerCard>
            <ItemCard>
             <ImageCard />
             <TextCard>Massas</TextCard>
@@ -121,6 +128,7 @@ const Home = () => {
             <TextCard>Frutos do Mar</TextCard>
             <QuantityCard>(21)</QuantityCard>
            </ItemCard2>
+           </ContainerCard>
         
     </>
 
