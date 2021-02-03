@@ -30,6 +30,7 @@ const ItemCard = styled.div`
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
 
 const ItemCard2 = styled.div`
@@ -43,6 +44,7 @@ const ItemCard2 = styled.div`
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
 
 const ImageCard = styled.div`
