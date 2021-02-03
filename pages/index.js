@@ -31,8 +31,8 @@ const ContainerCard = styled.div`
 
 const ItemCard = styled.div`
   position: absolute;
-  top: 255px;
-  bottom: 0;
+  top: 355px;
+  bottom: 30px;
   left: 8px;
   width: 47%;
   height: 211px;
@@ -43,7 +43,8 @@ const ItemCard = styled.div`
 
 const ItemCard2 = styled.div`
   position: absolute;
-  top: 255px;
+  top: 355px;
+  bottom: 30px;
   right: 8px;
   width: 47%;
   height: 211px;
