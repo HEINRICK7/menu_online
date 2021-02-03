@@ -2,6 +2,8 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
+    width: auto;
+  height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: '#F6F5F5',
   },
 }
 
