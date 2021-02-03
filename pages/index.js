@@ -25,7 +25,7 @@ const ContainerCard = styled.div`
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(800px, 2fr));
 
 `;
 
@@ -46,6 +46,30 @@ const ItemCard2 = styled.div`
   top: 355px;
   bottom: 30px;
   right: 8px;
+  width: 47%;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+const ItemCard3 = styled.div`
+  position: absolute;
+  top: 580px;
+  left:5px;
+  bottom: 30px;
+  width: 47%;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+const ItemCard4 = styled.div`
+  position: absolute;
+  top: 580px;
+  right:8px;
+  bottom: 30px;
   width: 47%;
   height: 211px;
   background: #ffffff;
@@ -78,6 +102,31 @@ const ImageCard2 = styled.div`
 
 `;
 
+const ImageCard3 = styled.div`
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 33.65%;
+  background: url('https://media.istockphoto.com/photos/picanha-traditional-brazilian-barbecue-picture-id845659874?k=6&m=845659874&s=612x612&w=0&h=_WB81C_16Y_snfz_eb1Vo5FeO6ye1v2RG8zDxIgwXVI=');
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 8px 8px 0px 0px;
+
+`;
+const ImageCard4 = styled.div`
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 33.65%;
+  background: url('https://media-cdn.tripadvisor.com/media/photo-s/09/8a/e8/44/restaurante-e-pizzaria.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 8px 8px 0px 0px;
+
+`;
+
 const TextCard = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
@@ -93,6 +142,8 @@ const TextCard = styled.div`
   line-height: 21px;
 
 `;
+
+
 
 const QuantityCard = styled.div`
   position: absolute;
@@ -114,21 +165,32 @@ const QuantityCard = styled.div`
 const Home = () => {
   return (
     <>
-        <HeaderWrap><h1>Logo</h1></HeaderWrap>
+        <HeaderWrap>
+          <h1>Logo</h1>
+        </HeaderWrap>
         <Title>Categorias</Title>
            <Input />
            <ContainerCard>
-           <ItemCard>
+              <ItemCard>
             <ImageCard />
             <TextCard>Massas</TextCard>
             <QuantityCard>(53)</QuantityCard>
            </ItemCard>
-
-           <ItemCard2>
+              <ItemCard2>
             <ImageCard2 />
             <TextCard>Frutos do Mar</TextCard>
             <QuantityCard>(21)</QuantityCard>
            </ItemCard2>
+              <ItemCard3>
+            <ImageCard3 />
+            <TextCard>Churrascos</TextCard>
+            <QuantityCard>(12)</QuantityCard>
+           </ItemCard3>
+              <ItemCard4>
+            <ImageCard4 />
+            <TextCard>Sucos</TextCard>
+            <QuantityCard>(20)</QuantityCard>
+           </ItemCard4>
            </ContainerCard>
         
     </>
