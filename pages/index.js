@@ -21,12 +21,12 @@ const Title = styled.div`
 
 const ItemCard = styled.div`
   position: absolute;
-  left: 5px;
+  left: 20px;
   right:0;
   top: 255px;
   bottom: 0;
 
-  width: 170px;
+  width: 177px;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -35,11 +35,11 @@ const ItemCard = styled.div`
 const ItemCard2 = styled.div`
    
    position: absolute;
-  left: 185px;
+  left: 217px;
   right: 5px;
   top: 255px;
   bottom: 0;
-  width: 170px;
+  width: 177px;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
