@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import Input from '../src/components/Input';
 
 
-
 const Title = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
   margin: 30px 0 0 20px ;
   font-family: Montserrat;
   font-size: 34px;
@@ -22,26 +21,104 @@ const Title = styled.div`
 
 const ItemCard = styled.div`
   position: absolute;
-  left: 4.83%;
-  right: 52.42%;
-  top: 28.46%;
-  bottom: 47.99%;
+  left: 5px;
+  right:0;
+  top: 255px;
+  bottom: 0;
 
-  width: 177px;
-  height: 200px;
-  background: red;
-  ;
+  width: 170px;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+`;
 
-border-radius: 8px;
+const ItemCard2 = styled.div`
+   
+   position: absolute;
+  left: 185px;
+  right: 5px;
+  top: 255px;
+  bottom: 0;
+  width: 170px;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+`;
+
+const ImageCard = styled.div`
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 33.65%;
+  background: url('https://exame.com/wp-content/uploads/2018/04/thinkstockphotos-807218760.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 8px 8px 0px 0px;
 
 `;
+const ImageCard2 = styled.div`
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 33.65%;
+  background: url('http://s2.glbimg.com/Ql8LnQXB7_i4-WNae2YNPOyz2jUK7wOW3-kWLt8Lk4uJlvjxcpMQWpLj-cL1WRqp/e.glbimg.com/og/ed/f/original/2013/09/24/mg_4634.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 8px 8px 0px 0px;
+
+`;
+
+const TextCard = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+  position: absolute;
+  left: 9.04%;
+  right: 9.04%;
+  top: 71.09%;
+  bottom: 19.43%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+
+`;
+
+const QuantityCard = styled.div`
+  position: absolute;
+  left: 9.04%;
+  right: 78.53%;
+  top: 85.31%;
+  bottom: 8.06%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #9586A8;
+`;
+
 
 const Home = () => {
   return (
     <>
         <Title>Categorias</Title>
            <Input />
-           <ItemCard />
+           <ItemCard>
+            <ImageCard />
+            <TextCard>Massas</TextCard>
+            <QuantityCard>(53)</QuantityCard>
+           </ItemCard>
+
+           <ItemCard2>
+            <ImageCard2 />
+            <TextCard>Frutos do Mar</TextCard>
+            <QuantityCard>(21)</QuantityCard>
+           </ItemCard2>
         
     </>
 

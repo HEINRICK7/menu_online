@@ -11,7 +11,7 @@ const InputBase = styled.input`
     width: 300px;
     padding: 15px 10px 15px 20px;
     background: #FFFFFF;
-    border: 1px solid #D9D0E3;
+    border: 2px solid #D9D0E3;
     border-radius: 27px;
 `;
 
