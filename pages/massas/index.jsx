@@ -1,5 +1,13 @@
 import React from 'react';
-import {  } from './massasStyle';
+import { 
+        Title,
+        ContainerCard,
+        ItemCard,
+        ImageCard,
+        TextCard,
+        QuantityCard,
+        PriceCard
+       } from './massasStyle';
 
 import Header from '../../src/components/Header/index';
 import Input from '../../src/components/Input'
