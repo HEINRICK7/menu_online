@@ -18,7 +18,7 @@ const Title = styled.div`
 
 const ContainerCard = styled.div`
   max-width: 1200px;
-  margin:50px 0 0 0;
+  margin-top:50px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
@@ -26,9 +26,8 @@ const ContainerCard = styled.div`
 `;
 const ItemCard = styled.div`
   width: 100%;
-  height: 130px;
+  height: auto;
   background:#0c4966;
-  border-radius: 30px 30px 8px 8px;
 
 `;
 const ImageCard = styled.div`
@@ -42,7 +41,7 @@ const ImageCard = styled.div`
 `;
 const TextCard = styled.div`
 text-align:center;
-margin:250px 0 0 0;
+margin-top:250px;
 padding: 30px;
 font-family: 'Oxygen', sans-serif;
 font-style: normal;
@@ -55,7 +54,8 @@ color: #FFFF;
 `;
 const PriceCard = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-
+  margin-bottom: 30px;
+  padding-bottom: 30px;
   color: #FFFF;
   text-align:center;
   font-size: 35px;
