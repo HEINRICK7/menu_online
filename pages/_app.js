@@ -2,6 +2,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 const GlobalStyle = createGlobalStyle`
   body {
+    font-family: 'Lato';
     margin: 0;
     padding: 0;
     box-sizing: border-box;

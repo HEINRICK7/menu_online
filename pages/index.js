@@ -5,15 +5,16 @@ import Link from 'next/link'
 
 import { FiSearch } from "react-icons/fi";
 
+import { FaChevronRight } from "react-icons/fa";
+
 import Input from '../src/components/Input';
 
 import Header from '../src/components/Header/index';
 
 
 const Title = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
   margin: 10px 0 0 20px ;
-  font-family: Montserrat;
+  font-family: 'Lato';
   font-size: 28px;
   line-height: 41px;
   /* identical to box height, or 121% */
@@ -39,7 +40,7 @@ const ItemCard = styled.div`
   bottom: 30px;
   width: auto;
   height: 211px;
-  background: #ffffff;
+  background: #FFFF;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
@@ -125,22 +126,18 @@ const ImageCard4 = styled.div`
 `;
 
 const TextCard = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-
   position: absolute;
   left: 9.04%;
   right: 9.04%;
   top: 71.09%;
   bottom: 19.43%;
 
-  font-family: Montserrat;
+  font-family: 'Lato';
   font-style: normal;
   font-size: 16px;
   line-height: 21px;
 
 `;
-
-
 
 const QuantityCard = styled.div`
   position: absolute;
@@ -157,7 +154,6 @@ const QuantityCard = styled.div`
 
   color: #9586A8;
 `;
-
 
 const Home = () => {
 
@@ -176,6 +172,7 @@ const Home = () => {
                 <ImageCard />
                 <TextCard>Massas</TextCard>
                 <QuantityCard>(53)</QuantityCard>
+                < FaChevronRight style={{position: 'absolute', marginTop: 170, marginLeft: 330}} />
               </ItemCard>
               </Link>  
               <ItemCard2>
