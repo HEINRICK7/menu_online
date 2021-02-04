@@ -1,6 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FiSearch } from "react-icons/fi";
 
 const InputBase = styled.input`
     //margin: 50px 0 30px 20px;
@@ -9,10 +10,10 @@ const InputBase = styled.input`
     margin-right: auto;
     margin-left: auto;
     width: 300px;
-    padding: 15px 10px 15px 20px;
+    padding: 15px 10px 15px 40px;
     background: #FFFFFF;
-    border: 2px solid #D9D0E3;
-    border-radius: 27px;
+    border: 1px solid #D9D0E3;
+    border-radius: 8px;
 `;
 
 const Input = ({ onChange, placeholder }) => {
@@ -20,8 +21,9 @@ const Input = ({ onChange, placeholder }) => {
         <>
             <InputBase 
             onChange={ onChange}
-            placeholder={ placeholder}
+            placeholder="Search"
              />
+             <FiSearch style={{position: 'absolute', marginTop: -32, marginLeft: 45}}/>
         </>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 import Input from '../src/components/Input';
 
 import {HeaderWrap} from '../src/components/Header/headerWrap';
@@ -33,7 +34,7 @@ const ItemCard = styled.div`
   position: absolute;
   top: 355px;
   bottom: 30px;
-  left: 8px;
+  left: 10px;
   width: 47%;
   height: 211px;
   background: #ffffff;
@@ -45,7 +46,7 @@ const ItemCard2 = styled.div`
   position: absolute;
   top: 355px;
   bottom: 30px;
-  right: 8px;
+  right: 10px;
   width: 47%;
   height: 211px;
   background: #ffffff;
@@ -56,7 +57,7 @@ const ItemCard2 = styled.div`
 const ItemCard3 = styled.div`
   position: absolute;
   top: 580px;
-  left:5px;
+  left:10px;
   bottom: 30px;
   width: 47%;
   height: 211px;
@@ -68,7 +69,7 @@ const ItemCard3 = styled.div`
 const ItemCard4 = styled.div`
   position: absolute;
   top: 580px;
-  right:8px;
+  right:10px;
   bottom: 30px;
   width: 47%;
   height: 211px;
