@@ -43,7 +43,7 @@ const TextCard = styled.div`
 text-align:center;
 margin-top:250px;
 padding: 30px;
-font-family: 'Oxygen', sans-serif;
+font-family: 'Lato';
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -53,15 +53,13 @@ text-transform: uppercase;
 color: #FFFF;
 `;
 const PriceCard = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-  width: 0;
+  font-family: 'Raleway', sans-serif;
   margin: -30px 0 0 150px;
   padding-bottom: 30px;
   color: #FFFF;
   font-size: 45px;
-  font-family: Montserrat;
-
-  @media (min-width: 481px) and (max-width: 850px) {
+  
+@media (min-width: 481px) and (max-width: 850px) {
   
     margin: -30px 0 0 350px;
   
@@ -69,6 +67,7 @@ const PriceCard = styled.div`
 
 `;
 const Span = styled.span`
+    font-family: 'Raleway', sans-serif;
     color: #FFFF;
     font-size: 16px;
     margin: 150px 0 0 125px;

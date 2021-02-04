@@ -9,6 +9,7 @@ export const HeaderWrap = styled.div`
     h1 {
         margin-left: 14px;
         color: #ffff;
+        font-family: 'Lato';
     }
 
 `;
