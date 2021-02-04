@@ -21,7 +21,7 @@ const Massas = () => {
           <ContainerCard> 
               <ItemCard>
               <TextCard>Tagliatelle ao molho</TextCard>
-              <PriceCard><strong style={{color:'#2ABB9B'}}>R$ 15.50 </strong> / pessoa</PriceCard>
+              <PriceCard><strong>R$ 15.50 </strong> / pessoa</PriceCard>
                 <ImageCard />
                 <QuantityCard>(53)</QuantityCard>
               </ItemCard>
