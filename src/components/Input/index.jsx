@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const InputBase = styled.input`
     //margin: 50px 0 30px 20px;
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
     width: 300px;

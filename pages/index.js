@@ -10,9 +10,9 @@ import {HeaderWrap} from '../src/components/Header/headerWrap';
 
 const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-  margin: 30px 0 0 20px ;
+  margin: 10px 0 0 20px ;
   font-family: Montserrat;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 41px;
   /* identical to box height, or 121% */
   letter-spacing: 0.41px;
@@ -24,19 +24,18 @@ const Title = styled.div`
 `;
 const ContainerCard = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top:50px;
+  padding: 20px;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(800px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 
 `;
 
 const ItemCard = styled.div`
-  position: absolute;
-  top: 355px;
+  position: relative;
   bottom: 30px;
-  left: 10px;
-  width: 47%;
+  width: auto;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -44,11 +43,9 @@ const ItemCard = styled.div`
 `;
 
 const ItemCard2 = styled.div`
-  position: absolute;
-  top: 355px;
+  position: relative;
   bottom: 30px;
-  right: 10px;
-  width: 47%;
+  width: auto;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -56,11 +53,9 @@ const ItemCard2 = styled.div`
 `;
 
 const ItemCard3 = styled.div`
-  position: absolute;
-  top: 580px;
-  left:10px;
+  position: relative;
   bottom: 30px;
-  width: 47%;
+  width: auto;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
@@ -68,11 +63,9 @@ const ItemCard3 = styled.div`
 `;
 
 const ItemCard4 = styled.div`
-  position: absolute;
-  top: 580px;
-  right:10px;
+  position: relative;
   bottom: 30px;
-  width: 47%;
+  width: auto;
   height: 211px;
   background: #ffffff;
   border-radius: 8px;
