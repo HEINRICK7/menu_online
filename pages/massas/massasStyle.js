@@ -51,8 +51,7 @@ font-weight: 600;
 font-size: 20px;
 line-height: 22px;
 letter-spacing: -0.41px;
-color: #317589
-
+color: #317589;
 `;
 
 export const PriceCard = styled.div`
