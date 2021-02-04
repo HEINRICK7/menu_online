@@ -25,51 +25,40 @@ const ContainerCard = styled.div`
 
 `;
 const ItemCard = styled.div`
-  position: absolute;
   width: 100%;
-  height: 160px;
+  height: 130px;
+  background:#0c4966;
+  border-radius: 30px 30px 8px 8px;
 
 `;
 const ImageCard = styled.div`
-  position: absolute;
-  width: 50%;
-  left: 20px;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  width: 100%;
+  height: 260px;
   background: url('https://exame.com/wp-content/uploads/2018/04/thinkstockphotos-807218760.jpg');
   background-repeat: no-repeat;
   background-size:cover;
-  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
 `;
 const TextCard = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-position: absolute;
-left: 58%;
-font-family: Montserrat;
+text-align:center;
+margin:250px 0 0 0;
+padding: 30px;
+font-family: 'Oxygen', sans-serif;
 font-style: normal;
-font-weight: 600;
-font-size: 20px;
+font-weight: 300;
+font-size: 16px;
 line-height: 22px;
-letter-spacing: -0.41px;
-color: #317589;
+letter-spacing: 0.91px;
+text-transform: uppercase;
+color: #FFFF;
 `;
 const PriceCard = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 0px;
-  color: #317589;
-  position: absolute;
-  height: 22px;
-  left: 60%;
-  top: 40px;
-
-  font-size: 20px;
+  color: #FFFF;
+  text-align:center;
+  font-size: 35px;
   font-family: Montserrat;
 
 `;
@@ -94,13 +83,13 @@ const QuantityCard = styled.div`
           <Header />
           <Title>Massas</Title>
           <Input />
-          <ContainerCard> 
+          <ContainerCard>  
+              <ImageCard>
               <ItemCard>
               <TextCard>Tagliatelle ao molho</TextCard>
-              <PriceCard><strong>R$ 15.50 </strong> / pessoa</PriceCard>
-                <ImageCard />
-                <QuantityCard>(53)</QuantityCard>
+              <PriceCard>R$ 15.50</PriceCard>
               </ItemCard>
+              </ImageCard>
            </ContainerCard>
         </>
 

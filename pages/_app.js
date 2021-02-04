@@ -2,6 +2,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
     width: 100%;
     margin: 0;
     box-sizing: border-box;
