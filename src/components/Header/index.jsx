@@ -1,12 +1,14 @@
 import React from 'react';
 import { HeaderWrap } from './headerWrap';
 
-const Content = () => {
+const Header = () => {
     return (
 
-        <HeaderWrap />
+        <HeaderWrap>
+             <h1>Logo</h1>
+        </HeaderWrap>
 
     )
 }
 
-export default Content;
+export default Header;

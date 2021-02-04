@@ -1,92 +1,76 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useRouter } from 'next/router';
-import Link from 'next/link'
+import styled from 'styled-components';
 
-import { FiSearch } from "react-icons/fi";
-
-import Input from '../src/components/Input';
-
-import Header from '../src/components/Header/index';
-
-
-const Title = styled.div`
+export const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
   margin: 10px 0 0 20px ;
   font-family: Montserrat;
   font-size: 28px;
   line-height: 41px;
-  /* identical to box height, or 121% */
   letter-spacing: 0.41px;
-  
-
-  /* Text Primary */
-
   color: #2D0C57;
 `;
-const ContainerCard = styled.div`
+
+export const ContainerCard = styled.div`
   max-width: 1200px;
-  margin-top:50px;
-  padding: 20px;
+  margin:50px 0 0 0;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 
 `;
 
-const ItemCard = styled.div`
-  position: relative;
-  bottom: 30px;
-  width: auto;
-  height: 211px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-`;
-
-const ItemCard2 = styled.div`
-  position: relative;
-  bottom: 30px;
-  width: auto;
-  height: 211px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-`;
-
-const ItemCard3 = styled.div`
-  position: relative;
-  bottom: 30px;
-  width: auto;
-  height: 211px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-`;
-
-const ItemCard4 = styled.div`
-  position: relative;
-  bottom: 30px;
-  width: auto;
-  height: 211px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-`;
-
-const ImageCard = styled.div`
+export const ItemCard = styled.div`
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 33.65%;
+  width: 100%;
+  height: 160px;
+
+`;
+
+export const ItemCard2 = styled.div`
+  position: relative;
+  bottom: 30px;
+  width: auto;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+export const ItemCard3 = styled.div`
+  position: relative;
+  bottom: 30px;
+  width: auto;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+export const ItemCard4 = styled.div`
+  position: relative;
+  bottom: 30px;
+  width: auto;
+  height: 211px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+`;
+
+export const ImageCard = styled.div`
+  position: absolute;
+  width: 50%;
+  left: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background: url('https://exame.com/wp-content/uploads/2018/04/thinkstockphotos-807218760.jpg');
   background-repeat: no-repeat;
   background-size:cover;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
 `;
-const ImageCard2 = styled.div`
+export const ImageCard2 = styled.div`
   position: absolute;
   left: 0%;
   right: 0%;
@@ -99,7 +83,7 @@ const ImageCard2 = styled.div`
 
 `;
 
-const ImageCard3 = styled.div`
+export const ImageCard3 = styled.div`
   position: absolute;
   left: 0%;
   right: 0%;
@@ -111,7 +95,7 @@ const ImageCard3 = styled.div`
   border-radius: 8px 8px 0px 0px;
 
 `;
-const ImageCard4 = styled.div`
+export const ImageCard4 = styled.div`
   position: absolute;
   left: 0%;
   right: 0%;
@@ -124,25 +108,39 @@ const ImageCard4 = styled.div`
 
 `;
 
-const TextCard = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-
-  position: absolute;
-  left: 9.04%;
-  right: 9.04%;
-  top: 71.09%;
-  bottom: 19.43%;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 21px;
+export const TextCard = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+position: absolute;
+left: 58%;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+letter-spacing: -0.41px;
+color: #317589
 
 `;
 
+export const PriceCard = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  color: #317589;
+  position: absolute;
+  height: 22px;
+  left: 60%;
+  top: 40px;
 
-const QuantityCard = styled.div`
+  font-size: 20px;
+  font-family: Montserrat;
+
+`;
+
+export const QuantityCard = styled.div`
   position: absolute;
   left: 9.04%;
   right: 78.53%;
@@ -157,46 +155,3 @@ const QuantityCard = styled.div`
 
   color: #9586A8;
 `;
-
-
-const Home = () => {
-
-  const router = useRouter();
-
-  return (
-    <>
-        <Header/>
-        <Title>Categorias</Title>
-           <Input>
-           <FiSearch />
-           </Input>
-           <ContainerCard>
-             <Link href="./massas">  
-              <ItemCard>
-                <ImageCard />
-                <TextCard>Massas</TextCard>
-                <QuantityCard>(53)</QuantityCard>
-              </ItemCard>
-              </Link>  
-              <ItemCard2>
-            <ImageCard2 />
-            <TextCard>Frutos do Mar</TextCard>
-            <QuantityCard>(21)</QuantityCard>
-           </ItemCard2>
-              <ItemCard3>
-            <ImageCard3 />
-            <TextCard>Churrascos</TextCard>
-            <QuantityCard>(12)</QuantityCard>
-           </ItemCard3>
-              <ItemCard4>
-            <ImageCard4 />
-            <TextCard>Sucos</TextCard>
-            <QuantityCard>(20)</QuantityCard>
-           </ItemCard4>
-           </ContainerCard>
-        
-    </>
-
-  )}
-
-export default Home;
