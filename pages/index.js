@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { FiSearch } from "react-icons/fi";
 
 import Input from '../src/components/Input';
 
@@ -170,7 +171,9 @@ const Home = () => {
           <h1>Logo</h1>
         </HeaderWrap>
         <Title>Categorias</Title>
-           <Input />
+           <Input>
+           <FiSearch />
+           </Input>
            <ContainerCard>
               <ItemCard>
             <ImageCard />
