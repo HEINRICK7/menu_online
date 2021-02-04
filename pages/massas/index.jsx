@@ -45,7 +45,7 @@ margin-top:250px;
 padding: 30px;
 font-family: 'Oxygen', sans-serif;
 font-style: normal;
-font-weight: 300;
+font-weight: 700;
 font-size: 16px;
 line-height: 22px;
 letter-spacing: 0.91px;
@@ -54,28 +54,32 @@ color: #FFFF;
 `;
 const PriceCard = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-  margin-bottom: 30px;
+  width: 0;
+  margin: -30px 0 0 150px;
   padding-bottom: 30px;
   color: #FFFF;
-  text-align:center;
-  font-size: 35px;
+  font-size: 45px;
   font-family: Montserrat;
 
+  @media (min-width: 481px) and (max-width: 850px) {
+  
+    margin: -30px 0 0 350px;
+  
+}
+
 `;
-const QuantityCard = styled.div`
-  position: absolute;
-  left: 9.04%;
-  right: 78.53%;
-  top: 85.31%;
-  bottom: 8.06%;
+const Span = styled.span`
+    color: #FFFF;
+    font-size: 16px;
+    margin: 150px 0 0 125px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+    @media (min-width: 481px) and (max-width: 850px) {
+  
+  margin: -30px 0 0 320px;
 
-  color: #9586A8;
+}
+
+
 `;
 
     return (
@@ -87,7 +91,8 @@ const QuantityCard = styled.div`
               <ImageCard>
               <ItemCard>
               <TextCard>Tagliatelle ao molho</TextCard>
-              <PriceCard>R$ 15.50</PriceCard>
+              <Span>R$</Span>
+              <PriceCard>15.50</PriceCard>
               </ItemCard>
               </ImageCard>
            </ContainerCard>
