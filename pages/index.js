@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { FiSearch } from "react-icons/fi";
 
-import { FaChevronRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 import Input from '../src/components/Input';
 
@@ -172,7 +172,7 @@ const Home = () => {
                 <ImageCard />
                 <TextCard>Massas</TextCard>
                 <QuantityCard>(53)</QuantityCard>
-                < FaChevronRight style={{position: 'absolute', marginTop: 170, marginLeft: 330}} />
+                < FaArrowRight style={{position: 'absolute', marginTop: 170, marginLeft: 330}} />
               </ItemCard>
               </Link>  
               <ItemCard2>
