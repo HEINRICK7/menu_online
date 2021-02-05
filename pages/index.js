@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { FiSearch } from "react-icons/fi";
 
-import { FaArrowRight, FaArrowL } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 import Input from '../src/components/Input';
 

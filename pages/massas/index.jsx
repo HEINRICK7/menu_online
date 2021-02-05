@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { FaPlusCircle, FaArrowLeft} from "react-icons/fa";
-import { BsStopwatch } from "react-icons/bs"
+import { BsStopwatch } from "react-icons/bs";
+import { IoRestaurantOutline } from "react-icons/io5";
+
 import Link from 'next/link'
 
 import Header from '../../src/components/Header/index';
@@ -81,8 +84,10 @@ const ImageCard = styled.div`
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   }
   .iconWatch {
+    position:absolute;
+    top: 30px;
+    left: 35px;
     font-size: 35px;
-    margin: 20px 0 0 32px;
     color: rgba(58, 155, 240, 0.767);
   }
   .iconWatch h6 {
@@ -91,6 +96,23 @@ const ImageCard = styled.div`
     margin: 0 0 0 0;
   }
   .iconWatch p {
+    font-size: 10px;
+    margin: 0 0 0 -8px;
+  }
+
+  .iconRestaurant {
+    position:absolute;
+    font-size: 35px;
+    top: 120px;
+    left: 35px;
+    color: rgba(58, 155, 240, 0.767);
+  }
+  .iconRestaurant h6 {
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0 0 0 0;
+  }
+  .iconRestaurant p {
     font-size: 10px;
     margin: 0 0 0 -8px;
   }
@@ -161,6 +183,12 @@ const Span = styled.span`
                   <BsStopwatch/>
                   <h6>Tempo: </h6>
                   <p>20 minutos</p>
+                </div>
+          
+                <div className="iconRestaurant">
+                  <IoRestaurantOutline/>
+                  <h6>Serve: </h6>
+                  <p>4 pessoas</p>
                 </div>
               </div>
               <TextCard>Tagliatelle ao molho</TextCard>
