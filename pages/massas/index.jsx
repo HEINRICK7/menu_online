@@ -80,12 +80,12 @@ const ImageCard = styled.div`
     top: 295px;
     width: 80px;
     height:252px;
-    background: #ffffff;
+    background: #f;
     box-shadow: rgba(136, 165, 191, 0.5) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px 0px 16px 0px;
   }
   .iconWatch {
     position:absolute;
-    top: 30px;
+    top: 20px;
     left: 23px;
     font-size: 35px;
     color: rgba(58, 155, 240, 0.767);
@@ -103,7 +103,7 @@ const ImageCard = styled.div`
   .iconRestaurant {
     position:absolute;
     font-size: 35px;
-    top: 120px;
+    top: 110px;
     left: 23px;
     color: rgba(58, 155, 240, 0.767);
   }
@@ -147,33 +147,42 @@ color: #0c4966;
 const PriceCard = styled.div`
   width: 0;
   font-family: 'Raleway', sans-serif;
-  margin: -30px 0 0 150px;
+  margin: -30px 0 0 145px;
   padding-bottom: 30px;
   color: #0c4966;
   font-size: 45px;
   
 @media (min-width: 481px) and (max-width: 850px) {
   
-    margin: -30px 0 0 280px;
+    margin: -30px 0 0 380px;
   
 }
 @media (min-width: 320px) and (max-width: 480px) {
   
-  margin: -30px 0 0 155px;
+  margin: -30px 0 0 145px;
 }
 
 `;
 const Span = styled.span`
-    font-family: 'Raleway', sans-serif;
-    color:#0c4966;
-    font-size: 16px;
-    margin: 150px 0 0 125px;
-
-    @media (min-width: 481px) and (max-width: 850px) {
+  font-family: 'Raleway', sans-serif;
+  color:#0c4966;
+  font-size: 16px;
+  margin: 150px 0 0 115px;
+  @media (min-width: 481px) and (max-width: 850px) {
   
-  margin: -30px 0 0 250px;
+    margin: -30px 0 0 350px;
 
-}
+  }
+`;
+
+const CodCard = styled.div`
+
+  margin-top:-30px;
+  margin-bottom: 30px;
+  color:#0c4966;
+  text-align: center;
+  font-family: 'Lato';
+  font-style: normal;
 
 
 `;
@@ -210,6 +219,7 @@ const Span = styled.span`
                   </Link>
               </div>
               <TextCard>Tagliatelle ao molho</TextCard>
+              <CodCard>(cod: 188976)</CodCard>
               <Span>R$</Span>
               <PriceCard>15.50</PriceCard>
               </ItemCard>
