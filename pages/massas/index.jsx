@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaPlusCircle, FaArrowLeft } from "react-icons/fa";
+import Link from 'next/link'
 
 import Header from '../../src/components/Header/index';
 import Input from '../../src/components/Input';
@@ -8,12 +10,19 @@ const Massas = () => {
 
 const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-  margin: 10px 0 0 20px ;
+  width: 0;
+  margin: 10px 0 0 50px ;
   font-family: Montserrat;
   font-size: 28px;
   line-height: 41px;
   letter-spacing: 0.41px;
   color: #2D0C57;
+
+  .iconLeft {
+      position: absolute;
+      font-size: 20px;
+      margin: 10px 0 0 -30px;
+  }
 `;
 
 const ContainerCard = styled.div`
@@ -22,13 +31,21 @@ const ContainerCard = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-
+ 
 `;
 const ItemCard = styled.div`
   width: 100%;
   height: auto;
-  background:#0c4966;
-
+  background:#FFFF;
+  
+  .iconPlus {
+      position: absolute;
+      width: 30px;
+      padding: 10px;
+      color: #0c4966;
+      font-size: 30px;
+      margin: -75px 0 0 350px;
+  }
 `;
 const ImageCard = styled.div`
   width: 100%;
@@ -50,13 +67,14 @@ font-size: 16px;
 line-height: 22px;
 letter-spacing: 0.91px;
 text-transform: uppercase;
-color: #FFFF;
+color: #0c4966;
 `;
 const PriceCard = styled.div`
+  width: 0;
   font-family: 'Raleway', sans-serif;
   margin: -30px 0 0 150px;
   padding-bottom: 30px;
-  color: #FFFF;
+  color: #0c4966;
   font-size: 45px;
   
 @media (min-width: 481px) and (max-width: 850px) {
@@ -68,7 +86,7 @@ const PriceCard = styled.div`
 `;
 const Span = styled.span`
     font-family: 'Raleway', sans-serif;
-    color: #FFFF;
+    color:#0c4966;
     font-size: 16px;
     margin: 150px 0 0 125px;
 
@@ -84,7 +102,11 @@ const Span = styled.span`
     return (
         <>
           <Header />
-          <Title>Massas</Title>
+          <Link href="./">  
+          <Title> 
+          <FaArrowLeft className="iconLeft" />
+          Massas</Title>
+          </Link>
           <Input />
           <ContainerCard>  
               <ImageCard>
@@ -92,6 +114,9 @@ const Span = styled.span`
               <TextCard>Tagliatelle ao molho</TextCard>
               <Span>R$</Span>
               <PriceCard>15.50</PriceCard>
+              <Link href="./massasItem">
+               < FaPlusCircle className="iconPlus"/>
+              </Link>
               </ItemCard>
               </ImageCard>
            </ContainerCard>
