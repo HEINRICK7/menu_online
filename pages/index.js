@@ -43,6 +43,12 @@ const ItemCard = styled.div`
   background: #FFFF;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  .iconRight {
+    position: absolute;
+    top: 170px;
+    right: 10px;
+  }
 `;
 
 const ItemCard2 = styled.div`
@@ -172,7 +178,7 @@ const Home = () => {
                 <ImageCard />
                 <TextCard>Massas</TextCard>
                 <QuantityCard>(53)</QuantityCard>
-                < FaArrowRight style={{position: 'absolute', marginTop: 170, marginLeft: 250}} />
+                < FaArrowRight className="iconRight"/>
               </ItemCard>
               </Link>  
               <ItemCard2>

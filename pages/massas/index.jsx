@@ -28,6 +28,7 @@ const Title = styled.div`
 const ContainerCard = styled.div`
   max-width: 1200px;
   margin-top:50px;
+  padding: 5px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
