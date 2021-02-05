@@ -80,7 +80,6 @@ const ImageCard = styled.div`
     top: 295px;
     width: 80px;
     height:252px;
-    background: #f;
     box-shadow: rgba(136, 165, 191, 0.5) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px 0px 16px 0px;
   }
   .iconWatch {
