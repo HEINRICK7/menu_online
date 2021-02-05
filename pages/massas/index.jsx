@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FaPlusCircle, FaArrowLeft} from "react-icons/fa";
-import { BsStopwatch } from "react-icons/bs";
+import { FaArrowLeft } from "react-icons/fa";
+import { BsStopwatch, BsPlusCircle } from "react-icons/bs";
 import { IoRestaurantOutline } from "react-icons/io5";
 
 import Link from 'next/link'
@@ -81,7 +81,7 @@ const ImageCard = styled.div`
     width: 80px;
     height:252px;
     background: #ffffff;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: rgba(136, 165, 191, 0.5) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px 0px 16px 0px;
   }
   .iconWatch {
     position:absolute;
@@ -115,6 +115,18 @@ const ImageCard = styled.div`
   .iconRestaurant p {
     font-size: 10px;
     margin: 0 0 0 -8px;
+  }
+
+  .iconPlus {
+    position:absolute;
+    font-size: 32px;
+    top: 190px;
+    left: 12px;
+    color: rgba(58, 155, 240, 0.767);
+  }
+  .iconPlus p {
+    font-size: 10px;
+    margin: -5px 0 0 5px;
   }
   
 
@@ -190,13 +202,16 @@ const Span = styled.span`
                   <h6>Serve: </h6>
                   <p>4 pessoas</p>
                 </div>
+                <Link href="./massasItem">
+                <div className="iconPlus">
+                      < BsPlusCircle />
+                      <p>mais..</p> 
+                  </div>
+                  </Link>
               </div>
               <TextCard>Tagliatelle ao molho</TextCard>
               <Span>R$</Span>
               <PriceCard>15.50</PriceCard>
-              <Link href="./massasItem">
-               < FaPlusCircle className="iconPlus"/>
-              </Link>
               </ItemCard>
               </ImageCard>
            </ContainerCard>
