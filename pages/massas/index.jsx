@@ -78,15 +78,15 @@ const ImageCard = styled.div`
   .descriptionCard {
     position: absolute;
     top: 295px;
-    width: 100px;
-    height:250px;
-    background: #fafafa;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    width: 80px;
+    height:252px;
+    background: #ffffff;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   }
   .iconWatch {
     position:absolute;
     top: 30px;
-    left: 35px;
+    left: 23px;
     font-size: 35px;
     color: rgba(58, 155, 240, 0.767);
   }
@@ -104,7 +104,7 @@ const ImageCard = styled.div`
     position:absolute;
     font-size: 35px;
     top: 120px;
-    left: 35px;
+    left: 23px;
     color: rgba(58, 155, 240, 0.767);
   }
   .iconRestaurant h6 {
