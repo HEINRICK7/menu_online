@@ -172,7 +172,7 @@ const Home = () => {
                 <ImageCard />
                 <TextCard>Massas</TextCard>
                 <QuantityCard>(53)</QuantityCard>
-                < FaArrowRight style={{position: 'absolute', marginTop: 170, marginLeft: 330}} />
+                < FaArrowRight style={{position: 'absolute', marginTop: 170, marginLeft: 250}} />
               </ItemCard>
               </Link>  
               <ItemCard2>

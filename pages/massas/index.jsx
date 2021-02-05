@@ -44,8 +44,23 @@ const ItemCard = styled.div`
       padding: 10px;
       color: #0c4966;
       font-size: 30px;
-      margin: -75px 0 0 350px;
+      top: 620px;
+      right: 10px;
   }
+  @media (min-width: 481px) and (max-width: 850px) {
+    
+    .iconPlus {
+      position: absolute;
+      width: 30px;
+      padding: 10px;
+      color: #0c4966;
+      font-size: 30px;
+      top: 610px;
+      right: 10px;
+     
+  }
+
+}
 `;
 const ImageCard = styled.div`
   width: 100%;
@@ -54,6 +69,7 @@ const ImageCard = styled.div`
   background-repeat: no-repeat;
   background-size:cover;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  
 
 `;
 const TextCard = styled.div`
@@ -79,8 +95,12 @@ const PriceCard = styled.div`
   
 @media (min-width: 481px) and (max-width: 850px) {
   
-    margin: -30px 0 0 350px;
+    margin: -30px 0 0 280px;
   
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  margin: -30px 0 0 155px;
 }
 
 `;
@@ -92,7 +112,7 @@ const Span = styled.span`
 
     @media (min-width: 481px) and (max-width: 850px) {
   
-  margin: -30px 0 0 320px;
+  margin: -30px 0 0 250px;
 
 }
 
