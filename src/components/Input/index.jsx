@@ -10,10 +10,16 @@ const InputBase = styled.input`
     margin-right: auto;
     margin-left: auto;
     width: 300px;
-    padding: 15px 10px 15px 20px;
+    padding: 15px 10px 15px 50px;
     background: #FFFFFF;
     border: 1px solid #D9D0E3;
     border-radius: 8px;
+
+::placeholder{
+
+    color: rgba(58, 155, 240, 0.767);
+}
+
 `;
 
 const Input = ({ onChange, placeholder }) => {

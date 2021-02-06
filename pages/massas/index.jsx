@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FaArrowLeft } from "react-icons/fa";
-import { BsStopwatch, BsPlusCircle } from "react-icons/bs";
+import { BsStopwatch, BsPlusCircle, BsSearch } from "react-icons/bs";
 import { IoRestaurantOutline } from "react-icons/io5";
 
 import Link from 'next/link'
@@ -173,7 +173,6 @@ const Span = styled.span`
 
   }
 `;
-
 const CodCard = styled.div`
 
   margin-top:-30px;
@@ -185,6 +184,34 @@ const CodCard = styled.div`
 
 
 `;
+const IconSearch = styled.div`
+  position: absolute;
+  top: 210px;
+  left: -10px;
+  color: rgba(58, 155, 240, 0.767);
+
+  .iconSearch {
+  
+    @media (min-width: 481px) and (max-width: 850px) {
+  
+  margin: -30px 0 0 250px;
+
+}
+
+@media (min-width: 360px) and (max-width: 640px) {
+
+margin: -30px 0 0 160px;
+}
+
+@media (min-width: 360px) and (max-width: 680px) {
+
+margin: -30px 0 0 40px;
+}
+
+
+  }
+
+`
 
     return (
         <>
@@ -195,6 +222,9 @@ const CodCard = styled.div`
           Massas</Title>
           </Link>
           <Input />
+          <IconSearch>
+              <BsSearch className="iconSearch"/>
+          </IconSearch>
           <ContainerCard>  
               <ImageCard>
               <ItemCard>
