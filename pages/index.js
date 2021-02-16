@@ -39,36 +39,23 @@ const ContainerCard = styled.div`
 
 const ItemCard = styled.div`
   position: relative;
-  bottom: 30px;
-  width: auto;
-  height: 211px;
-  background: #FFFF;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   .iconRight {
     position: absolute;
-    top: 170px;
+    top: 370px;
     right: 10px;
   }
 `;
 
-const ImageCard = styled.image`
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 33.65%;
-  background-repeat: no-repeat;
-  background-size:cover;
-  border-radius: 8px 8px 0px 0px;
-
-`;
 const TextCard = styled.div`
   position: absolute;
   left: 9.04%;
   right: 9.04%;
-  top: 71.09%;
+  top: 82%;
   bottom: 19.43%;
 
   font-family: 'Lato';
@@ -82,7 +69,7 @@ const QuantityCard = styled.div`
   position: absolute;
   left: 9.04%;
   right: 78.53%;
-  top: 85.31%;
+  top: 90%;
   bottom: 8.06%;
 
   font-family: Roboto;
@@ -118,10 +105,8 @@ const Home = () => {
              {categoria.map(result => {
                return (
                 <ItemCard >
-                  <ImageCard>
-                  <img src={result.image_categoria.url} alt="new"/>
-                  </ImageCard>
-                
+                  <img style={{width: '100%', height: '80%' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
+                 
                 <TextCard>{result.name_categoria}</TextCard>
                 <QuantityCard>{result.id}</QuantityCard>
                 < FaArrowRight className="iconRight"/>
