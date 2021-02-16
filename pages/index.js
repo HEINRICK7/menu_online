@@ -33,21 +33,20 @@ const ContainerCard = styled.div`
   padding: 20px;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 `;
 
 const ItemCard = styled.div`
   position: relative;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   margin-bottom: 25px;
   border-radius: 8px;
 
   .iconRight {
-    position: absolute;
-    top: 370px;
-    right: 10px;
+    margin: 25px 10px 0 0;
+    float: right;
   }
 `;
 
@@ -105,7 +104,7 @@ const Home = () => {
              {categoria.map(result => {
                return (
                 <ItemCard >
-                  <img style={{width: '100%', height: '80%' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
+                  <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
                  
                 <TextCard>{result.name_categoria}</TextCard>
                 <QuantityCard>{result.id}</QuantityCard>
