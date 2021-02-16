@@ -5,7 +5,7 @@ const Header = () => {
     return (
 
         <HeaderWrap>
-             <h1>Logo</h1>
+             <h1>Menu Online</h1>
         </HeaderWrap>
 
     )

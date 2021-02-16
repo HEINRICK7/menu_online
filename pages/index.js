@@ -29,7 +29,7 @@ const Title = styled.div`
 `;
 const ContainerCard = styled.div`
   margin-top:50px;
-  padding: 20px;
+  padding: 50px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
@@ -40,7 +40,7 @@ const ItemCard = styled.div`
   width: auto;
   background-color: white;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   border-radius: 8px;
 
   .iconRight {
@@ -76,7 +76,12 @@ const Home = () => {
   const router = useRouter();
   
   useEffect(() => {
-    axios.get('http://localhost:1337/categorias').then(response => {
+    axios.get('http://localhost:1337/categorias', {
+      header:('Content-Type: text/event-stream'),
+      header:('Cache-Control: no-cache'),
+      header:('Connection: keep-alive'),
+      header:('X-Accel-Buffering: no'),
+    }).then(response => {
     setCategoria(response.data)  
     console.log(response.data[0]);
 });
@@ -93,7 +98,7 @@ const Home = () => {
             
              {categoria.map(result => {
                return (
-                <ItemCard >
+                <ItemCard key={result.id} >
                   <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
                  
                 <TextCard>{result.name_categoria}</TextCard>
