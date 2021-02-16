@@ -99,7 +99,7 @@ const Home = () => {
              {categoria.map(result => {
                return (
                 <ItemCard key={result.id} >
-                  <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
+                  <img  src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
                  
                 <TextCard>{result.name_categoria}</TextCard>
                 <QuantityCard>{result.id}</QuantityCard>
