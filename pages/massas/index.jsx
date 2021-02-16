@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { FaArrowLeft } from "react-icons/fa";
@@ -11,6 +11,8 @@ import Header from '../../src/components/Header/index';
 import Input from '../../src/components/Input';
 
 const Massas = () => {
+
+  const [categoria, setCategoria ] = useState([])
 
 const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
@@ -52,7 +54,7 @@ const ItemCard = styled.div`
       top: 620px;
       right: 10px;
   }
-  @media (min-width: 481px) and (max-width: 850px) {
+  @media (max-width: 320px){
     
     .iconPlus {
       position: absolute;
@@ -146,30 +148,40 @@ color: #0c4966;
 const PriceCard = styled.div`
   width: 0;
   font-family: 'Raleway', sans-serif;
-  margin: -30px 0 0 145px;
   padding-bottom: 30px;
   color: #0c4966;
   font-size: 45px;
-  
-@media (min-width: 481px) and (max-width: 850px) {
-  
-    margin: -30px 0 0 380px;
-  
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  
+
+@media (min-width: 320px){ 
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
   margin: -30px 0 0 145px;
+  };
+
+@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+@media screen and (min-width: 450px) {
+  
+  margin: -30px 0 0 280px;
 }
 
+@media screen and (min-width: 700px) {
+  
+  margin: -30px 0 0 370px;
+}
 `;
 const Span = styled.span`
   font-family: 'Raleway', sans-serif;
   color:#0c4966;
   font-size: 16px;
   margin: 150px 0 0 115px;
-  @media (min-width: 481px) and (max-width: 850px) {
   
-    margin: -30px 0 0 350px;
+  @media (min-width:480px) { 
+  
+    margin: -30px 0 0 245px;
 
   }
 `;
@@ -203,7 +215,7 @@ const IconSearch = styled.div`
 margin: -30px 0 0 160px;
 }
 
-@media (min-width: 360px) and (max-width: 680px) {
+@media (min-width: 320px) and (max-width: 568px) {
 
 margin: -30px 0 0 40px;
 }
