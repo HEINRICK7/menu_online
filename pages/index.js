@@ -28,34 +28,29 @@ const Title = styled.div`
   color: #2D0C57;
 `;
 const ContainerCard = styled.div`
-  max-width: 1200px;
   margin-top:50px;
   padding: 20px;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 
 `;
 
 const ItemCard = styled.div`
-  position: relative;
+  width: auto;
   background-color: white;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   margin-bottom: 25px;
   border-radius: 8px;
 
   .iconRight {
-    margin: 25px 10px 0 0;
+    margin: -20px 10px 0 0;
     float: right;
   }
 `;
 
 const TextCard = styled.div`
-  position: absolute;
-  left: 9.04%;
-  right: 9.04%;
-  top: 82%;
-  bottom: 19.43%;
+  margin: 2px 0 0 10px;
 
   font-family: 'Lato';
   font-style: normal;
@@ -65,15 +60,10 @@ const TextCard = styled.div`
 `;
 
 const QuantityCard = styled.div`
-  position: absolute;
-  left: 9.04%;
-  right: 78.53%;
-  top: 90%;
-  bottom: 8.06%;
-
-  font-family: Roboto;
+  margin: 0 0 0 25px;
+  font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 900;
   font-size: 12px;
   line-height: 14px;
 
