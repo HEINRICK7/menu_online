@@ -76,7 +76,7 @@ const Home = () => {
   const router = useRouter();
   
   useEffect(() => {
-    axios.get('http://localhost:1337/categorias', {
+    axios.get('https://app-menu-online.herokuapp.com/categorias', {
       header:('Content-Type: application/json'),
       header:('Cache-Control: no-cache'),
       header:('Connection: keep-alive'),
