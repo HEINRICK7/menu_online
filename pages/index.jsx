@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router';
-import Link from 'next/link'
+import Link from '../src/components/Link';
+import Image from 'next/image'
 
 import axios from 'axios';
 
@@ -29,7 +30,7 @@ const Title = styled.div`
 `;
 const ContainerCard = styled.div`
   margin-top:50px;
-  padding: 50px;
+  padding: 10px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
@@ -42,9 +43,9 @@ const ItemCard = styled.div`
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   margin-bottom: 20px;
   border-radius: 8px;
-
+ 
   .iconRight {
-    margin: -20px 10px 0 0;
+    margin: 20px 10px 0 0;
     float: right;
   }
 `;
@@ -56,6 +57,7 @@ const TextCard = styled.div`
   font-style: normal;
   font-size: 16px;
   line-height: 21px;
+  text-decoration: none;
 
 `;
 
@@ -66,6 +68,7 @@ const QuantityCard = styled.div`
   font-weight: 900;
   font-size: 12px;
   line-height: 14px;
+  text-decoration: none;
 
   color: #9586A8;
 `;
@@ -78,12 +81,9 @@ const Home = () => {
   useEffect(() => {
     axios.get('https://app-menu-online.herokuapp.com/categorias', {
       header:('Content-Type: application/json'),
-      header:('Cache-Control: no-cache'),
-      header:('Connection: keep-alive'),
-      header:('X-Accel-Buffering: no'),
     }).then(response => {
-    setCategoria(response.data)  
-    console.log(response.data[0]);
+    setCategoria(response.data);
+    console.log(response.data)
 });
 
   }, [])
@@ -95,16 +95,20 @@ const Home = () => {
            <FiSearch />
            </Input>
            <ContainerCard>
-            
+
              {categoria.map(result => {
-               return (
+               return (            
+
+                
                 <ItemCard key={result.id} >
-                  <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={result.imagem_categoria.name} alt="new"/>
-                 
-                <TextCard>{result.nome_categoria}</TextCard>
-                <QuantityCard>{result.id}</QuantityCard>
-                < FaArrowRight className="iconRight"/>
+                  <Link href={`${(result.nome_categoria).toLowerCase()}`}>               
+                  <img style={{ width: '100%', height: '80%'}} src={result.imagem_categoria.name} alt="new"/>
+                  < FaArrowRight className="iconRight"/>
+              </Link>
+              <TextCard>{result.nome_categoria}</TextCard>
+              <QuantityCard>{result.id}</QuantityCard>
               </ItemCard>
+              
                )})}
            </ContainerCard>
         

@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { BsStopwatch, BsPlusCircle, BsSearch } from "react-icons/bs";
 import { IoRestaurantOutline } from "react-icons/io5";
 
-import Link from 'next/link'
+import Link from '../../src/components/Link';
 
 import Header from '../../src/components/Header/index';
 import Input from '../../src/components/Input';
