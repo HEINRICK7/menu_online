@@ -77,7 +77,7 @@ const Home = () => {
   
   useEffect(() => {
     axios.get('http://localhost:1337/categorias', {
-      header:('Content-Type: '),
+      header:('Content-Type: application/json'),
       header:('Cache-Control: no-cache'),
       header:('Connection: keep-alive'),
       header:('X-Accel-Buffering: no'),
@@ -99,9 +99,9 @@ const Home = () => {
              {categoria.map(result => {
                return (
                 <ItemCard key={result.id} >
-                  <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={`http://localhost:1337${result.image_categoria.url}`} alt="new"/>
+                  <img style={{width: '100%', height: '80%', borderRadius: '8px 8px 30px 30px' }} src={result.imagem_categoria.name} alt="new"/>
                  
-                <TextCard>{result.name_categoria}</TextCard>
+                <TextCard>{result.nome_categoria}</TextCard>
                 <QuantityCard>{result.id}</QuantityCard>
                 < FaArrowRight className="iconRight"/>
               </ItemCard>
