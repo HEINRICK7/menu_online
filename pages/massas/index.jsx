@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+
+import axios from 'axios';
 
 import { FaArrowLeft } from "react-icons/fa";
 import { BsStopwatch, BsPlusCircle, BsSearch } from "react-icons/bs";
@@ -12,8 +15,18 @@ import Input from '../../src/components/Input';
 
 const Massas = () => {
 
-  const [categoria, setCategoria ] = useState([])
+  const [produto, setProduto ] = useState([])
+  const router = useRouter();
+  
+  useEffect(() => {
+    axios.get('https://app-menu-online.herokuapp.com/produtos', {
+      header:('Content-Type: application/json'),
+    }).then(response => {
+    setProduto(response.data);
+    console.log(response.data)
+});
 
+  }, [])
 const Title = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
   width: 0;
