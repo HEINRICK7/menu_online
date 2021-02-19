@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import axios from 'axios';
 
-import { FiSearch } from "react-icons/fi";
+import { BsSearch } from "react-icons/bs";
 
 import { FaArrowRight } from "react-icons/fa";
 
@@ -72,9 +72,15 @@ const QuantityCard = styled.div`
 
   color: #9586A8;
 `;
+const IconSearch = styled.div`
+
+  color: rgba(58, 155, 240, 0.767);
+
+`;
 
 const Home = () => {
-  const [categoria, setCategoria] = useState([])
+  const [categorias, setCategorias] = useState([])
+  const [ search, setSearch ] = useState('');
 
   const router = useRouter();
   
@@ -82,38 +88,52 @@ const Home = () => {
     axios.get('https://app-menu-online.herokuapp.com/categorias', {
       header:('Content-Type: application/json'),
     }).then(response => {
-    setCategoria(response.data);
+    setCategorias(response.data);
     console.log(response.data)
 });
 
   }, [])
+
+  const handleChange = (e) => {
+    setSearch(e.target.value)
+  }
+
+  const filteredCoins = categorias.filter(categoria => 
+    categoria.nome_categoria.toLowerCase().includes(search.toLowerCase()))
+
+    console.log(filteredCoins)
+
   return (
     <>
         <Header/>
         <Title>Categorias</Title>
-           <Input>
-           <FiSearch />
+           <Input
+             type="text" 
+             placeholder="pesquizar" 
+             className="coin-input"
+             onChange={handleChange}
+           >
+            <IconSearch>
+              <BsSearch className="iconSearch"/>
+            </IconSearch>
            </Input>
+           
            <ContainerCard>
-
-             {categoria.map(result => {
-               return (            
-
-                
+             {filteredCoins.map(result => (
+              
                 <ItemCard key={result.id} >
                   <Link href={`${(result.nome_categoria).toLowerCase()}`}>               
-                  <img style={{ width: '100%', height: '80%'}} src={result.imagem_categoria.name} alt="new"/>
-                  < FaArrowRight className="iconRight"/>
-              </Link>
-              <TextCard>{result.nome_categoria}</TextCard>
-              <QuantityCard>{result.id}</QuantityCard>
+                    <img style={{ width: '100%', height: '80%'}} src={result.imagem_categoria.name} alt="new"/>
+                    < FaArrowRight className="iconRight"/>
+                  </Link>
+                  <TextCard>{result.nome_categoria}</TextCard>
+                  <QuantityCard>{result.id}</QuantityCard>
               </ItemCard>
               
-               )})}
+               ))}
            </ContainerCard>
-        
+
     </>
 
   )}
-
 export default Home;
