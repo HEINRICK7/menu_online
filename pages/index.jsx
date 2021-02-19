@@ -77,10 +77,9 @@ const IconSearch = styled.div`
 
 `;
 const Spinner = styled.div`
-  display: block;
+
   text-align: center;
-  justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 const Home = () => {
@@ -130,7 +129,7 @@ const Home = () => {
                 <ClimbingBoxLoader 
                 color={'#F5A623'} 
                 loading={loading} 
-                size={20}
+                size={15}
                 />
                 </Spinner>
              ):(
