@@ -2,17 +2,19 @@ import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router';
 import Link from '../src/components/Link';
-import Image from 'next/image'
+
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 import axios from 'axios';
 
-import { BsSearch } from "react-icons/bs";
 
 import { FaArrowRight } from "react-icons/fa";
 
 import Input from '../src/components/Input';
 
 import Header from '../src/components/Header/index';
+
+
 
 
 const Title = styled.div`
@@ -74,10 +76,18 @@ const IconSearch = styled.div`
   color: rgba(58, 155, 240, 0.767);
 
 `;
+const Spinner = styled.div`
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+`;
 
 const Home = () => {
+
   const [categorias, setCategorias] = useState([])
   const [ search, setSearch ] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const router = useRouter();
   
@@ -85,8 +95,9 @@ const Home = () => {
     axios.get('https://app-menu-online.herokuapp.com/categorias', {
       header:('Content-Type: application/json'),
     }).then(response => {
-    setCategorias(response.data);
-    console.log(response.data)
+      setLoading(false)  
+      setCategorias(response.data);
+      console.log(response.data)
 });
 
   }, [])
@@ -109,14 +120,22 @@ const Home = () => {
              placeholder="pesquizar" 
              className="coin-input"
              onChange={handleChange}
-           >
-            <IconSearch>
-              <BsSearch className="iconSearch"/>
-            </IconSearch>
-           </Input>
+           />
+           
            
            <ContainerCard>
-             {filteredCoins.map(result => (
+             {
+             loading ? (
+               <Spinner>
+                <ClimbingBoxLoader 
+                color={'#F5A623'} 
+                loading={loading} 
+                size={30}
+                />
+                </Spinner>
+             ):(
+               <>
+              {filteredCoins.map(result => (
               
                 <ItemCard key={result.id} >
                   <Link href={`${(result.nome_categoria).toLowerCase()}`}>               
@@ -125,9 +144,12 @@ const Home = () => {
                   </Link>
                   <TextCard>{result.nome_categoria}</TextCard>
                   <QuantityCard>{result.id}</QuantityCard>
-              </ItemCard>
+                </ItemCard>
               
                ))}
+             </>
+             )}
+            
            </ContainerCard>
 
     </>

@@ -13,6 +13,8 @@
     "react-dom": "^16.8.0",
     "react-icons": "^4.1.0",
     "react-is": "^16.8.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-spinners": "^0.10.6",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
