@@ -35,12 +35,13 @@ const Title = styled.div`
   font-size: 28px;
   line-height: 41px;
   letter-spacing: 0.41px;
-  color: #2D0C57;
+  color: #FFFF;
 
   .iconLeft {
       position: absolute;
       font-size: 20px;
       margin: 10px 0 0 -30px;
+      color: #FFFF;
   }
 `;
 
@@ -54,10 +55,10 @@ const ContainerCard = styled.div`
  
 `;
 const ItemCard = styled.div`
-  width: 100%;
-  height: auto;
-  background:#FFFF;
-  
+  width: auto;
+  height: 470px;
+  background: #FFFF;
+
   .iconPlus {
       position: absolute;
       width: 30px;
@@ -71,20 +72,19 @@ const ItemCard = styled.div`
 
 
 `;
-const ImageCard = styled.div`
+const ImageCard = styled.img`
   width: 100%;
   height: 260px;
-  background: url('https://exame.com/wp-content/uploads/2018/04/thinkstockphotos-807218760.jpg');
-  background-repeat: no-repeat;
-  background-size:cover;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+`;
 
+const Card = styled.div`
   .descriptionCard {
     position: absolute;
-    top: 295px;
+    top: 290px;
     width: 80px;
-    height:252px;
+    height:260px;
     box-shadow: rgba(136, 165, 191, 0.5) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px 0px 16px 0px;
+    background: rgba(255, 255, 255, 0.842);
   }
   .iconWatch {
     position:absolute;
@@ -136,7 +136,7 @@ const ImageCard = styled.div`
 `;
 const TextCard = styled.div`
 text-align:center;
-margin-top:250px;
+margin-top:20px;
 padding: 30px;
 font-family: 'Lato';
 font-style: normal;
@@ -192,15 +192,6 @@ const CodCard = styled.div`
 
 
 `;
-const IconSearch = styled.div`
-
-  color: rgba(58, 155, 240, 0.767);
-  position: absolute;
-  top: 25px;
-  left: 70px;
-
-
-`
 
     return (
         <>
@@ -211,23 +202,24 @@ const IconSearch = styled.div`
           Massas</Title>
           </Link>
           <Input />
-          <IconSearch>
-              <BsSearch className="iconSearch"/>
-          </IconSearch>
           <ContainerCard>  
-              <ImageCard>
-              <ItemCard>
+          {produto.map(result => (
+              <Card>
+                
+              <ItemCard> 
+    
               <div className="descriptionCard">
+               
                 <div className="iconWatch">
                   <BsStopwatch/>
                   <h6>Tempo: </h6>
-                  <p>20 minutos</p>
+                  <p>{result.tempo}</p>
                 </div>
           
                 <div className="iconRestaurant">
                   <IoRestaurantOutline/>
                   <h6>Serve: </h6>
-                  <p>4 pessoas</p>
+                  <p>{result.serve}</p>
                 </div>
                 <Link href="./massasItem">
                 <div className="iconPlus">
@@ -235,13 +227,16 @@ const IconSearch = styled.div`
                       <p>mais..</p> 
                   </div>
                   </Link>
+                 
               </div>
-              <TextCard>Tagliatelle ao molho</TextCard>
-              <CodCard>(cod: 188976)</CodCard>
+              <ImageCard src={result.imagem_produto.name} alt="new"/>
+              <TextCard>{result.nome_produto}</TextCard>
+              <CodCard>({result.id})</CodCard>
               <Span>R$</Span>
-              <PriceCard>15.50</PriceCard>
+              <PriceCard>{(result.preco).toFixed(2)}</PriceCard>
               </ItemCard>
-              </ImageCard>
+              </Card>
+               ))}
            </ContainerCard>
         </>
 
