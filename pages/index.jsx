@@ -120,7 +120,7 @@ const Home = () => {
               
                 <ItemCard key={result.id} >
                   <Link href={`${(result.nome_categoria).toLowerCase()}`}>               
-                    <img style={{ width: '100%', height: '80%'}} src={result.imagem_categoria.name} alt="new"/>
+                    <img style={{ width: '100%', height: '80%', borderRadius:'8px 8px 50px 50px'}} src={result.imagem_categoria.name} alt="new"/>
                     < FaArrowRight className="iconRight"/>
                   </Link>
                   <TextCard>{result.nome_categoria}</TextCard>
