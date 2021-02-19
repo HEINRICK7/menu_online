@@ -6,13 +6,14 @@ import styled from 'styled-components';
 const InputBase = styled.input`
     //margin: 50px 0 30px 20px;
     display: block;
-    width: auto;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
-    padding: 15px 10px 15px 50px;
     background: #FFFFFF;
-    border: 1px solid #D9D0E3;
+    border:0;
     border-radius: 8px;
 
 ::placeholder{

@@ -67,20 +67,9 @@ const ItemCard = styled.div`
       top: 620px;
       right: 10px;
   }
-  @media (max-width: 320px){
-    
-    .iconPlus {
-      position: absolute;
-      width: 30px;
-      padding: 10px;
-      color: #0c4966;
-      font-size: 30px;
-      top: 610px;
-      right: 10px;
-     
-  }
 
-}
+
+
 `;
 const ImageCard = styled.div`
   width: 100%;
@@ -170,12 +159,6 @@ const PriceCard = styled.div`
   margin: -30px 0 0 145px;
   };
 
-@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
-
 @media screen and (min-width: 450px) {
   
   margin: -30px 0 0 280px;
@@ -212,6 +195,9 @@ const CodCard = styled.div`
 const IconSearch = styled.div`
 
   color: rgba(58, 155, 240, 0.767);
+  position: absolute;
+  top: 25px;
+  left: 70px;
 
 
 `
