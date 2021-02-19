@@ -130,7 +130,7 @@ const Home = () => {
                 <ClimbingBoxLoader 
                 color={'#F5A623'} 
                 loading={loading} 
-                size={30}
+                size={20}
                 />
                 </Spinner>
              ):(
