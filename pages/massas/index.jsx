@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
+
 import axios from 'axios';
 
 import { FaArrowLeft } from "react-icons/fa";
@@ -46,7 +47,6 @@ const Title = styled.div`
 `;
 
 const ContainerCard = styled.div`
-  max-width: 1200px;
   margin-top:50px;
   padding: 5px;
   display: grid;
@@ -56,58 +56,44 @@ const ContainerCard = styled.div`
 `;
 const ItemCard = styled.div`
   width: auto;
-  height: 470px;
-  background: #FFFF;
-
-  .iconPlus {
-      position: absolute;
-      width: 30px;
-      padding: 10px;
-      color: #0c4966;
-      font-size: 30px;
-      top: 620px;
-      right: 10px;
-  }
-
-
+  height: 450px;
+  background: #fcb045;
 
 `;
-const ImageCard = styled.img`
+const Image = styled.img`
   width: 100%;
   height: 260px;
 `;
+const ImageCard = styled.div`
+  margin: -265px 0 0 0;
+`;
 
-const Card = styled.div`
+const CardLeft = styled.div`
   .descriptionCard {
-    position: absolute;
-    top: 290px;
+    position: relative;
+    top: -5px;
+    padding-top: 5px;
     width: 80px;
-    height:260px;
-    box-shadow: rgba(136, 165, 191, 0.5) 6px 0px 12px 0px, rgba(255, 255, 255, 0.8) -6px 0px 16px 0px;
-    background: rgba(255, 255, 255, 0.842);
+    height:255px;
+    background: rgba(255, 255, 255, 0.938);
   }
   .iconWatch {
-    position:absolute;
-    top: 20px;
-    left: 23px;
+    margin: 0px 0 0 20px;
     font-size: 35px;
     color: rgba(58, 155, 240, 0.767);
   }
   .iconWatch h6 {
     font-size: 12px;
     font-weight: 900;
-    margin: 0 0 0 0;
+    margin:0 0 0 0;
   }
   .iconWatch p {
     font-size: 10px;
     margin: 0 0 0 -8px;
   }
-
   .iconRestaurant {
-    position:absolute;
+    margin: 35px 0 0 20px;
     font-size: 35px;
-    top: 110px;
-    left: 23px;
     color: rgba(58, 155, 240, 0.767);
   }
   .iconRestaurant h6 {
@@ -119,26 +105,22 @@ const Card = styled.div`
     font-size: 10px;
     margin: 0 0 0 -8px;
   }
-
   .iconPlus {
-    position:absolute;
+    margin: 30px 0 0 20px;
     font-size: 32px;
-    top: 190px;
-    left: 12px;
     color: rgba(58, 155, 240, 0.767);
   }
   .iconPlus p {
     font-size: 10px;
-    margin: -5px 0 0 5px;
+    margin: -7px 0 0 5px;
   }
   
-
 `;
 const TextCard = styled.div`
 text-align:center;
-margin-top:20px;
+margin-top:0px;
 padding: 30px;
-font-family: 'Lato';
+font-family: Lato;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -204,18 +186,16 @@ const CodCard = styled.div`
           <Input />
           <ContainerCard>  
           {produto.map(result => (
-              <Card>
-                
-              <ItemCard> 
-    
-              <div className="descriptionCard">
-               
+             <ItemCard> 
+              <CardLeft>
+              <div className="descriptionCard"> 
+            
                 <div className="iconWatch">
                   <BsStopwatch/>
                   <h6>Tempo: </h6>
                   <p>{result.tempo}</p>
                 </div>
-          
+               
                 <div className="iconRestaurant">
                   <IoRestaurantOutline/>
                   <h6>Serve: </h6>
@@ -229,13 +209,16 @@ const CodCard = styled.div`
                   </Link>
                  
               </div>
-              <ImageCard src={result.imagem_produto.name} alt="new"/>
+              </CardLeft>
+              <ImageCard>
+                <Image src={result.imagem_produto.name} alt="new"/> 
+              </ImageCard>
               <TextCard>{result.nome_produto}</TextCard>
-              <CodCard>({result.id})</CodCard>
+              <CodCard>({(result.id).replace(/[^\d]+/g,'').slice(0, 8)})</CodCard>
               <Span>R$</Span>
               <PriceCard>{(result.preco).toFixed(2)}</PriceCard>
+
               </ItemCard>
-              </Card>
                ))}
            </ContainerCard>
         </>
